@@ -1,3 +1,7 @@
+<script context="module" lang="ts">
+	let current: HTMLAudioElement;
+</script>
+
 <script lang="ts">
 	export let author: string = '紫咲シオン';
 	export let content: string;
@@ -9,7 +13,13 @@
 	let paused = true;
 
 	function stopOthers() {
-		// TODO: implement stopOthers
+		// Disable for now
+		// Ideally we should seek to the start first before unpausing.
+		// using current.load() to stop others doesn't work for subsequent play.
+		// if (current && current !== audio) {
+		// 	current.pause();
+		// }
+		current = audio;
 	}
 
 	function playPause() {
