@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-	export let author: string = '紫咲シオン';
+	export let author = '紫咲シオン';
 	export let content: string;
 	export let cite: string;
 	export let date: string;
